@@ -14,11 +14,11 @@
 
 #pragma once
 
-#if defined(IVX_IMGUI_EXPORTS)
-#define IMGUI_API __declspec(dllexport)
-#elif defined(IVX_IMGUI_IMPORTS)
-#define IMGUI_API __declspec(dllimport)
-#endif
+//#if defined(IVX_IMGUI_EXPORTS)
+//#define IMGUI_API __declspec(dllexport)
+//#elif defined(IVX_IMGUI_IMPORTS)
+//#define IMGUI_API __declspec(dllimport)
+//#endif
 
 //---- Define assertion handler. Defaults to calling assert().
 // - If your macro uses multiple statements, make sure is enclosed in a 'do { .. } while (0)' block so it can be used as a single statement.

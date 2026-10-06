@@ -1,11 +1,11 @@
 project "ImGui"
 	kind "StaticLib"
 	language "C++"
-    staticruntime "off"
+    cppdialect "C++20"
+    staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-    defines { "IVX_IMGUI_EXPORTS" }
 
 	files
 	{
@@ -24,7 +24,6 @@ project "ImGui"
 
 	filter "system:windows"
 		systemversion "latest"
-        cppdialect "C++20"
 
 	filter "configurations:Debug"
 		runtime "Debug"
